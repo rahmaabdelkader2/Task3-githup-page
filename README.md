@@ -9,14 +9,31 @@ ________________________
 
 example:
 
-#include <iostream>
-using namespace std;
-int main(){
-const int y=13;
-//y=15; ==> compiling error
-cout<<y;
-return 0;
-}
+1-constant variables
+
+-you can't -after assigning variable to const- change it's value.
+
+-you should initialize it in same step of declaration.
+
+(const int var =10;)
+
+example:
+
+>#include <iostream>
+ >using namespace std; 
+> 
+ >int main(){
+> 
+ >const int y=13;
+> 
+ >//y=15; ==> compiling error
+> 
+ >cout<<y;
+> 
+ >return 0;
+> 
+ >}
+
 (output=13)
 
 2-const with pointer variables
