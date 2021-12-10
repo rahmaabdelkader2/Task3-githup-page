@@ -59,59 +59,98 @@ example:
 
 2-const pointer variable point to value
 
-#include <iostream>
-using namespace std;
-int main(){
-int x=4;
-int z=10;
-char y='R';
-char p='C';
-int*const i=&x;
-char*const j=&y;
-*i=10;
-*j='D';
-//*i=&z;==> error
-//*j=&p;==> error
-cout << *i << " and " << *j<< endl;
-cout << i << " and " << j;
-return 0;
-}
+>#include <iostream>
+> 
+>using namespace std;
+> 
+>int main(){
+> 
+>int x=4;
+> 
+>int z=10;
+> 
+>char y='R';
+> 
+>char p='C';
+> 
+>int*const i=&x;
+> 
+>char*const j=&y;
+> 
+>*i=10;
+> 
+>*j='D';
+> 
+>//*i=&z;==> error
+> 
+>//*j=&p;==> error
+> 
+>cout << *i << " and " << *j<< endl;
+> 
+>cout << i << " and " << j;
+> 
+>return 0;
+> 
+>}
 (output= 10 and D
 0x61fefc and D)
 
 3-const pointer to const variable
 
-#include <iostream>
-using namespace std;
-int main(){
-int x=7;
-const int* const i = &x;
-// *i=10; ==>error
-char y='R';
-const char* const j = &y;
-// *j='B'; ==>error
-cout << *i << " and " << *j;
-return 0;
-}
+>#include <iostream>
+> 
+>using namespace std;
+> 
+>int main(){
+> 
+>int x=7;
+> 
+>const int* const i = &x;
+> 
+>// *i=10; ==>error
+> 
+>char y='R';
+> 
+>const char* const j = &y;
+> 
+>// *j='B'; ==>error
+> 
+>cout << *i << " and " << *j;
+> 
+>return 0;
+> 
+>}
+ 
 (output=7 and R)
 
 3-Passing const argument value to non const parameter of a function cause
 error.
+>#include <iostream>
+> 
+>using namespace std;
+>
+>int fun(int* y)
+> 
+>{
+> 
+>return *y;
+> 
+>}
+> 
+>int main()
+> 
+>{
+> 
+>int z = 8;
+> 
+>const int* x = &z;
+> 
+>cout<< fun(x);
+> 
+>return 0;
+> 
+>}
 
-#include <iostream>
-using namespace std;
-
-int fun(int* y)
-{
-return *y;
-}
-int main()
-{
-int z = 8;
-const int* x = &z;
-cout<< fun(x);
-return 0;
-}
 =====>error no output
 
 4-constant methods
