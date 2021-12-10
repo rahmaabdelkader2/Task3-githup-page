@@ -1,14 +1,5 @@
 # Const keyword and & in c++
-________________________
-1-constant variables
-
--you can't -after assigning variable to const- change it's value.
-
--you should initialize it in same step of declaration.
-(const int var =10;)
-
-example:
-
+_______________________________
 1-constant variables
 
 -you can't -after assigning variable to const- change it's value.
@@ -42,18 +33,28 @@ example:
 
 1-pointer variable point to a constant value.
 
-#include <iostream>
-using namespace std;
-int main(){
-int x=10;
-char y ='R';
-const int*i=&x;
-const char*j=&y;
-//*j=6;==> error
-x=9;
-y='H';
-cout<<*i<<" "<<*j;
-}
+>#include <iostream>
+>using namespace std;
+>
+>int main(){
+>
+>int x=10;
+>
+>char y ='R';
+>
+>const int*i=&x;
+>
+>const char*j=&y;
+> 
+>//*j=6;==> error
+> 
+>x=9;
+> 
+>y='H';
+> 
+>cout<<*i<<" "<<*j;
+>}
+>
 (output= 9 H)
 
 2-const pointer variable point to value
