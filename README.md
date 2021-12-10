@@ -96,6 +96,7 @@ example:
 > 
 >}
 (output= 10 and D
+ 
 0x61fefc and D)
 
 3-const pointer to const variable
@@ -128,6 +129,7 @@ example:
 
 3-Passing const argument value to non const parameter of a function cause
 error.
+ 
 >#include <iostream>
 > 
 >using namespace std;
@@ -232,7 +234,9 @@ However, the object initialization while declaring is possible only with the hel
  
 (output=
 20
+ 
 10
+ 
 12)
 
 4-constant function parameters & return type
@@ -277,6 +281,7 @@ However, the object initialization while declaring is possible only with the hel
 >}
 
 (output=10
+ 
 5)
 
 1-for constant return type
