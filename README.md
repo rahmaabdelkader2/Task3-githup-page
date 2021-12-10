@@ -343,50 +343,74 @@ However, the object initialization while declaring is possible only with the hel
 (output= 20
 10)
 ____________________________________________________________
+ 
 **& uses in C++**
 
 1-address operator
 
 -unary operator that returns address of it's operand
+ 
 example:
 
-int y=5;
-int*yptr=&y;
-//it store address (y) in pointer yptr
-
+>int y=5;
+>
+>int*yptr=&y;
+>
+>//it store address (y) in pointer yptr
+ 
 2-passing argument by reference
 
 example:
 
-void CubeByReference(int*nptr){
-*nptr=*nptr**nptr**nptr;
-}
-void main(void){
-int num =5;
-CubeByReference(&num);
-cout<<num;
-}
+>void CubeByReference(int*nptr){
+>
+>*nptr=*nptr**nptr**nptr;
+>
+>}
+ 
+>void main(void){
+> 
+>int num =5;
+>
+>CubeByReference(&num);
+>
+>cout<<num;
+>
+>}
 
 3-logic & (&&)
 
 -returns true if both statements are true
 
-int  main(){
-int x=5;
-int y=3;
-cout<<(x>3 && x<10);
-return 0;
-}
+>int  main(){
+>
+>int x=5;
+>
+>int y=3;
+>
+>cout<<(x>3 && x<10);
+>                      
+>return 0;
+>
+>}
+                     
 (output=1)
 
 4-Bitwise operators in c++
 
-int main (){
-int a =5;
-int b=9;
-cout<<"a= " << a<<" , "<<"b="<<b<<endl;
-cout<<"a&b= "<< (a&b)<<endl;
-}
+>int main (){
+>
+>int a =5;
+>
+>int b=9;
+>
+>cout<<"a= " << a<<" , "<<"b="<<b<<endl;
+>
+>cout<<"a&b= "<< (a&b)<<endl;
+>
+>}
+                            
 (output= a= 5 , b=9
+                            
 a&b= 1)
 
