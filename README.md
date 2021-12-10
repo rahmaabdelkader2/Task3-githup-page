@@ -26,7 +26,7 @@ example:
 > 
  >return 0;
 > 
- >}
+>}
 
 (output=13)
 
@@ -57,9 +57,10 @@ example:
 > 
 >cout<<*i<<" "<<*j;
 >}
->
+
 (output= 9 H)
 
+ 
 2-const pointer variable point to value
 
 >#include <iostream>
@@ -95,10 +96,12 @@ example:
 >return 0;
 > 
 >}
+ 
 (output= 10 and D
  
 0x61fefc and D)
 
+ 
 3-const pointer to const variable
 
 >#include <iostream>
@@ -127,6 +130,7 @@ example:
  
 (output=7 and R)
 
+ 
 3-Passing const argument value to non const parameter of a function cause
 error.
  
@@ -158,6 +162,7 @@ error.
 
 =====>error no output
 
+ 
 4-constant methods
 
 -When a function is declared as const, it can be called on any type of object,
@@ -232,6 +237,7 @@ However, the object initialization while declaring is possible only with the hel
 > 
 >}
  
+
 (output=
 20
  
@@ -239,6 +245,7 @@ However, the object initialization while declaring is possible only with the hel
  
 12)
 
+ 
 4-constant function parameters & return type
 
 >#include <iostream>
@@ -284,6 +291,7 @@ However, the object initialization while declaring is possible only with the hel
  
 5)
 
+ 
 1-for constant return type
 
 -the return type of fun() is const ,so it returns a const integer value to us.
@@ -315,8 +323,10 @@ However, the object initialization while declaring is possible only with the hel
 >}
  
 (output= 18
+ 
 9)
 
+ 
 2-for const return type and const parameter
 
 -both return type & parameter of function are const types
@@ -345,12 +355,17 @@ However, the object initialization while declaring is possible only with the hel
 >return 0;
 > 
 >}
+ 
 (output= 20
+ 
 10)
-____________________________________________________________
+
+ ___________________________________________________________
+
  
 **& uses in C++**
 
+ 
 1-address operator
 
 -unary operator that returns address of it's operand
@@ -362,6 +377,7 @@ example:
 >int*yptr=&y;
 >
 >//it store address (y) in pointer yptr
+ 
  
 2-passing argument by reference
 
@@ -383,6 +399,7 @@ example:
 >
 >}
 
+ 
 3-logic & (&&)
 
 -returns true if both statements are true
@@ -401,6 +418,7 @@ example:
                      
 (output=1)
 
+ 
 4-Bitwise operators in c++
 
 >int main (){
@@ -414,8 +432,8 @@ example:
 >cout<<"a&b= "<< (a&b)<<endl;
 >
 >}
-                            
+ 
+ 
 (output= a= 5 , b=9
                             
 a&b= 1)
-
