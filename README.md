@@ -1,5 +1,8 @@
 # Const keyword and & in c++
 _______________________________
+
+**Const keyword in c++**
+
 1-constant variables
 
 -you can't -after assigning variable to const- change it's value.
@@ -234,33 +237,44 @@ However, the object initialization while declaring is possible only with the hel
 
 4-constant function parameters & return type
 
-#include <iostream>
-using namespace std;
-
-    // const int can't be changed
-void fun(const int y)
-{
-// y = 6; ==>error
-cout << y;
-}
-
-void fun1(int y)
-{
-// Non-const value can be change
-y = 5;
-cout << '\n'<< y;
-}
-
-int main()
-{
-int x = 9;
-const int z = 10;
-
-fun(z);
-fun1(x);
-
-return 0;
-}
+>#include <iostream>
+> 
+>using namespace std;
+>
+>  // const int can't be changed
+> 
+>void fun(const int y)
+> 
+>{
+>  // y = 6; ==>error
+> 
+>cout << y;
+> 
+>}
+> 
+>void fun1(int y){
+> 
+>  // Non-const value can be change
+> 
+>y = 5;
+> 
+>cout << '\n'<< y;
+> 
+>}
+> 
+>int main(){
+> 
+>int x = 9;
+> 
+>const int z = 10;
+> 
+>fun(z);
+> 
+>fun1(x);
+> 
+>return 0;
+> 
+>}
 
 (output=10
 5)
@@ -269,48 +283,67 @@ return 0;
 
 -the return type of fun() is const ,so it returns a const integer value to us.
 
-
-#include <iostream>
-using namespace std;
-
-const int fun(int y)
-{
-y--;
-return y;
-}
-int main()
-{
-int x = 19;
-const int R = 10;
-cout << fun(x) << '\n' << fun(R);
-return 0;
-}
+>#include <iostream>
+> 
+>using namespace std;
+>
+>const int fun(int y)
+> 
+>{
+> 
+>y--;
+> 
+>return y;
+> 
+>}
+> 
+>int main(){
+> 
+>int x = 19;
+> 
+>const int R = 10;
+> 
+>cout << fun(x) << '\n' << fun(R);
+> 
+>return 0;
+>
+>}
+ 
 (output= 18
 9)
 
 2-for const return type and const parameter
 
 -both return type & parameter of function are const types
-
-#include <iostream>
-using namespace std;
-const int fun(const int y)
-{
-// y = 9; ==>error
-return y;
-}
-
-int main()
-{
-int x = 20;
-const int z = 10;
-cout << fun(x) << '\n' << fun(z);
-return 0;
-}
+>#include <iostream>
+> 
+>using namespace std;
+> 
+>const int fun(const int y)
+> 
+>{
+> 
+>// y = 9; ==>error
+> 
+>return y;
+> 
+>}
+> 
+>int main(){
+> 
+>int x = 20;
+> 
+>const int z = 10;
+> 
+>cout << fun(x) << '\n' << fun(z);
+> 
+>return 0;
+> 
+>}
 (output= 20
 10)
 ____________________________________________________________
-& uses in C++
+**& uses in C++**
 
 1-address operator
 
